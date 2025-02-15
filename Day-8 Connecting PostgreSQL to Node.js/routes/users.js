@@ -33,6 +33,16 @@ router.get('/hr', async (req, res) => {
   }
 });
 
+router.get('/age', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM users WHERE age BETWEEN 25 AND 30');
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Error fetching users:', err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 // POST (Create a new user)
 router.post('/', async (req, res) => {
   try {
