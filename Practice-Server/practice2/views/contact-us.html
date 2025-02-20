@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Form</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            margin-top: 0;
+            /* font-size: px; */
+            background-color: rgb(34, 34, 34); 
+            color: aliceblue; 
+            text-align: center; 
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        a{
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            margin: 20px;
+            background-color:beige;
+            border-radius: 8px;
+            color: rgb(30, 30, 30);
+            cursor: pointer;
+
+            &:hover{
+                color: rgb(30, 30, 30);
+                background-color: antiquewhite;
+            }
+        }
+        main{
+            margin-top: 10px;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+        form{
+            width: 25%;
+            height: 32vh;
+            background-color: aliceblue;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        label{
+            margin: 10px;
+        }
+        input{
+            padding: 10px;
+            margin: 10px;
+        }
+        button{
+            padding: 10px;
+            margin-left: 35%;
+            margin-top: 20px;
+            border-radius: 8px;
+            color: rgb(30, 30, 30);
+            cursor: pointer;
+            outline: none;
+            border: none;
+            background-color: beige;
+
+            &:hover{
+                color: rgb(30, 30, 30);
+                background-color: antiquewhite;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Contact Us Page</h1>
+        <a href="/">Home</a>
+    </header>
+
+    <main>
+        <form action='/contact-us' method='POST'>
+            <label for='name' for="name">Name: </label>
+            <input type='text' name='name' id="name" placeholder='Enter your Name'>
+            <br />
+            <label for='email' for="email">Email: </label>
+            <input type='email' name='email' id="email" placeholder='Enter your Email'>
+            <br />
+            
+            <button type='submit'>Submit</button>
+        </form>
+    </main>
+</body>
+</html>
